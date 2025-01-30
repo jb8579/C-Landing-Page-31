@@ -51,11 +51,11 @@
         width: 30px;
     }
     .spielbankhojsdhhYjs_img>a>img {
-        width: 170px;
-        position: absolute;
-        top: 72px;
-        left: 6px;
-    }
+      width: 170px;
+      position: absolute;
+      top: 50px;
+      left: 6px;
+  }
     .swiper-button-prev, .swiper-button-next {
         width: 18px !important;
         height: 18px !important;
@@ -172,8 +172,8 @@
       display: flex;
       align-items: normal;
       justify-content: space-between;
-      padding: 10px 0;
-    }
+      padding: 0px 0;
+  }
     .jgrtopll4-c > p {
       font-size: 15px;
       width: 210px;
@@ -189,18 +189,18 @@
       padding: 4px 0 8px;
     }
     .spielbankhojsdhhYjs_img > a > img {
-        width: 140px;
-        position: absolute;
-        top: 76px;
-        left: 6px;
+      width: 140px;
+      position: absolute;
+      top: 52px;
+      left: 6px;
     }
     .spielbankhojsdhhYjs_btn > a > button {
-        padding: 6px 10px;
-        border-radius: 30px;
-        outline: 0;
-        font-size: 12px;
-        margin-top: 20px;
-    }
+      padding: 6px 18px;
+      border-radius: 30px;
+      outline: 0;
+      font-size: 12px;
+      margin-top: 20px;
+  }
   }
   @media only screen and (max-width: 868px) and (min-width: 601px) {
     .card-container {
