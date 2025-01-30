@@ -16,8 +16,9 @@
         flex-wrap: wrap;
     }
     .footer-copy {
-        justify-content: center;
-    }
+      justify-content: center;
+      gap: 20px;
+  }
     .footer-top {
         width: unset;
     }

@@ -317,7 +317,7 @@ img.f-4 {
 
 .spielbank-waning-top > p {
   color: rgb(255, 255, 255);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 24px;
   margin: 0;
@@ -341,7 +341,7 @@ img.f-4 {
   color: #fff;
 }
 .spielbank-waning-top {
-  background: #2b2929;
+  background: #df2626;
 }
 .spielbank-waning-top > p > img {
   width: 38px;

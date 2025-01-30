@@ -392,16 +392,31 @@ p.racenum-name {
 }
 
 /* Copyright & Links */
+.warning-footer{
+    display: flex;
+    justify-content: baseline;
+    gap: 20px;
+}
+p.f-p-area.f-warning-img {
+    margin: 0px;
+    color: #fff;
+    font-style: oblique;
+}
 .footer-copy {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 14px;
-    padding-top: 15px;
+    padding-top: 35px;
     border-top: 1px solid #222;
     color: #bbb;
 }
-
+img.f-warning-img {
+    width: 60px;
+}
+.footer-copy > p{
+    margin: 0px;
+}
 .footer-copy a {
     color: #5b90cf;
     text-decoration: none;
