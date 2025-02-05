@@ -72,33 +72,32 @@
                         <img src="images/GETSETBET-logo.png" alt="Logo">
                     </div>
                     <div>
-                        <label for="email">Email Address <span style="color: red; font-weight: bold;">*</span>
-                        </label>
+                        <label for="login-email">Email Address <span style="color: red; font-weight: bold;">*</span></label>
                         <div class="lab-flex">
                             <div class="in-img">
                                 <ion-icon name="mail-outline"></ion-icon>
                             </div>
                             <div class="input-container">
-                                <input type="email" placeholder="Enter your email address" class="log-input">
+                                <input type="email" id="login-email" placeholder="Enter your email address" class="log-input">
                             </div>
                         </div>
                     </div>
                     <div>
-                        <label for="">Password <span style="color: red; font-weight: bold;">*</span>
-                        </label>
+                        <label for="login-password">Password <span style="color: red; font-weight: bold;">*</span></label>
                         <div class="lab-flex">
                             <div class="in-img">
                                 <ion-icon name="eye-off-outline"></ion-icon>
                             </div>
                             <div class="input-container">
-                                <input type="password" placeholder="Enter your password" class="log-input">
+                                <input type="password" id="login-password" placeholder="Enter your password" class="log-input">
                             </div>
                         </div>
                     </div>
-                    <button class="login-btn">Login</button>
+                    <button class="login-btn" disabled>Login</button> <!-- Disabled by default -->
                     <a href="#" class="forgot-password">Forgot password?</a>
                 </div>
             </div>
+            
             <div class="register-form-container">
                 <div class="register-form">
                     <button class="close-btn">&times;</button>
@@ -106,42 +105,46 @@
                         <img src="images/GETSETBET-logo.png" alt="Logo">
                     </div>
                     <div>
-                        <label for="email">Email Address <span style="color: red; font-weight: bold;">*</span>
-                        </label>
+                        <label for="email">Email Address <span style="color: red; font-weight: bold;">*</span></label>
                         <div class="lab-flex">
                             <div class="in-img">
                                 <ion-icon name="mail-outline"></ion-icon>
                             </div>
                             <div class="input-container">
-                                <input type="email" class="log-input" placeholder="Enter your email address">
+                                <input type="email" class="log-input" id="email" placeholder="Enter your email address">
                             </div>
                         </div>
                     </div>
                     <div>
-                        <label for="email">Password <span style="color: red; font-weight: bold;">*</span>
-                        </label>
+                        <label for="password">Password <span style="color: red; font-weight: bold;">*</span></label>
                         <div class="lab-flex">
                             <div class="in-img">
                                 <ion-icon name="eye-off-outline"></ion-icon>
                             </div>
                             <div class="input-container">
-                                <input type="password" class="log-input" placeholder="Enter your password">
+                                <input type="password" class="log-input" id="password" placeholder="Enter your password">
                             </div>
                         </div>
                     </div>
                     <div>
-                        <label for="email">Confirm Password <span style="color: red; font-weight: bold;">*</span>
-                        </label>
+                        <label for="confirm-password">Confirm Password <span style="color: red; font-weight: bold;">*</span></label>
                         <div class="lab-flex">
                             <div class="in-img">
                                 <ion-icon name="lock-closed-outline"></ion-icon>
                             </div>
                             <div class="input-container">
-                                <input type="password" class="log-input" placeholder="Confirm your password">
+                                <input type="password" class="log-input" id="confirm-password" placeholder="Confirm your password">
                             </div>
                         </div>
                     </div>
-                    <button class="register-btn">Register</button>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="age-confirmation">
+                        <label for="age-confirmation" class="checkbox-label">
+                            I confirm that I am over 18 and have read and agreed to the Terms and Privacy Policy of registering an account with GETSETBETS.com. Join now!
+                        </label>
+                    </div>
+            
+                    <button class="register-btn" disabled>Register</button>
                     <button class="toggle-login-btn">Already have an account? Login</button>
                 </div>
             </div>
@@ -157,10 +160,10 @@
                             <ion-icon name="mail-outline"></ion-icon>
                         </div>
                         <div class="input-container">
-                            <input type="email" placeholder="Enter your email address" class="log-input">
+                            <input type="email" id="forgot-email" placeholder="Enter your email address" class="log-input">
                         </div>
                     </div>
-                    <button class="forgot-password-btn">Send reset link</button>
+                    <button class="forgot-password-btn" disabled>Send reset link</button> <!-- Disabled by default -->
                     <button class="back-to-login-btn">Back to login</button>
                 </div>
             </div>
@@ -168,709 +171,970 @@
                 <p>The authorization link has been sent!</p>
             </div>
             <style>
-                label{font-weight:600;font-size:15px;color:#000}.forgot-password-form-container,.login-form-container,.register-form-container{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.897);align-items:center;justify-content:center;z-index:999;font-family:Inter,serif!important}.forgot-password-form-container.active,.lab-flex,.login-form-container.active,.register-form-container.active{display:flex}.forgot-password-form,.login-form,.register-form{background:#fff;padding:1.4rem 1.2rem;width:90%;max-width:370px;display:flex;flex-direction:column;position:relative}.log-img{width:100%;text-align:center;margin-bottom:15px}.log-img img{width:150px}.lab-flex{align-items:center;width:100%;margin-bottom:8px}.in-img{background:#ededed!important;padding:3px 10px;color:#000;font-size:22px;border-right:1px solid #9e9e9f}.forgot-password,.popup-message,.toggle-login-btn,input.log-input{font-size:15px!important}.input-container{flex-grow:1}input.log-input{border:0;outline:0;padding:8px;margin:8px 0;background:#f7f6f6!important;border-radius:0;color:#fff1f1!important;font-weight:400!important;width:100%}::placeholder{color:#363636;opacity:1}.toggle-login-btn{background:0 0!important;margin:4px 0;border:0;padding:10px 0!important;border-radius:6px;color:#404040!important;font-weight:500!important;text-decoration:underline;text-transform:unset}button{margin-top:15px;padding:8px 0;font-size:16px;font-weight:500;cursor:pointer;outline:0;border:0;text-transform:uppercase}.forgot-password-btn,.login-btn,.register-btn{background:#000!important;color:#fff!important}.forgot-password{color:#4a4545!important;text-align:center;margin-top:15px}.back-to-login-btn{color:#0e0e0e;background:#c7c7c7;margin-top:8px}.close-btn,p.forgot-password-instructions{color:#000}.popup-message{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background-color:#fff;padding:1rem 3rem;color:#000;font-weight:400;display:none;font-family:Inter,serif!important;z-index:9999;border:0;text-align:center}.popup-message.show{display:block}.close-btn{position:absolute;top:-28px;right:16px;background:0 0;border:none;font-size:34px;cursor:pointer}.close-btn:hover{color:#3b3b3b}
+                label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #000;
+}
+.forgot-password-form-container,
+.login-form-container,
+.register-form-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.897);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  font-family: Inter, serif !important;
+}
+.forgot-password-form-container.active,
+.lab-flex,
+.login-form-container.active,
+.register-form-container.active {
+  display: flex;
+}
+.forgot-password-form,
+.login-form,
+.register-form {
+  background: #fff;
+  padding: 1.4rem 1.2rem;
+  width: 90%;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.log-img {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.log-img img {
+  width: 150px;
+}
+.lab-flex {
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.in-img {
+  background: #ededed !important;
+  padding: 3px 10px;
+  color: #000;
+  font-size: 22px;
+  border-right: 1px solid #9e9e9f;
+}
+.forgot-password,
+.popup-message,
+.toggle-login-btn,
+input.log-input {
+  font-size: 15px !important;
+}
+.input-container {
+  flex-grow: 1;
+}
+input.log-input {
+  border: 0;
+  outline: 0;
+  padding: 8px;
+  margin: 8px 0;
+  background: #f7f6f6 !important;
+  border-radius: 0;
+  color: #000000 !important;
+  font-weight: 400 !important;
+  width: 100%;
+}
+::placeholder {
+  color: #363636;
+  opacity: 1;
+}
+.toggle-login-btn {
+  background: 0 0 !important;
+  margin: 4px 0;
+  border: 0;
+  padding: 10px 0 !important;
+  border-radius: 6px;
+  color: #404040 !important;
+  font-weight: 500 !important;
+  text-decoration: underline;
+  text-transform: unset;
+}
+button {
+  margin-top: 15px;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  text-transform: uppercase;
+}
+.forgot-password-btn,
+.login-btn,
+.register-btn {
+  background: #000 !important;
+  color: #fff !important;
+}
+.forgot-password {
+  color: #4a4545 !important;
+  text-align: center;
+  margin-top: 15px;
+}
+.back-to-login-btn {
+  color: #0e0e0e;
+  background: #c7c7c7;
+  margin-top: 8px;
+}
+.close-btn,
+p.forgot-password-instructions {
+  color: #000;
+}
+.popup-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1rem 3rem;
+  color: #000;
+  font-weight: 400;
+  display: none;
+  font-family: Inter, serif !important;
+  z-index: 9999;
+  border: 0;
+  text-align: center;
+}
+.popup-message.show {
+  display: block;
+}
+.close-btn {
+  position: absolute;
+  top: -28px;
+  right: 16px;
+  background: 0 0;
+  border: none;
+  font-size: 34px;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #3b3b3b;
+}
+
+            </style>
+            <style>
+                .checkbox-container {
+                    display: flex;
+                    align-items: first baseline;
+                    gap: 10px;
+                }
+                #age-confirmation {
+                    accent-color: red;
+                    border: 2px solid red;
+                    position: relative;
+                    top: 3px;
+                }
+                .checkbox-label {
+                    color: rgb(175, 10, 10);
+                    font-weight: 400;
+                    line-height: 18px;
+                    font-size: 14px;
+                    padding: 8px 0px;
+                }
+                #age-confirmation:checked + .checkbox-label {
+                    color: black;
+                }
+            
+                #age-confirmation:checked {
+                    accent-color: green;
+                    border: 2px solid green;
+                }
             </style>
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                function closePopup(popupSelector) {
-                    document.querySelector(popupSelector).classList.remove('active');
-                }
-                document.querySelectorAll('.close-btn').forEach(button => {
-                    button.addEventListener('click', function(event) {
-                    const popupContainer = event.target.closest('.login-form-container, .register-form-container, .forgot-password-form-container');
-                    if (popupContainer) {
-                        popupContainer.classList.remove('active');
+                    function closePopup(popupSelector) {
+                        document.querySelector(popupSelector).classList.remove('active');
                     }
+            
+                    // Close popups
+                    document.querySelectorAll('.close-btn').forEach(button => {
+                        button.addEventListener('click', function(event) {
+                            const popupContainer = event.target.closest('.login-form-container, .register-form-container, .forgot-password-form-container');
+                            if (popupContainer) {
+                                popupContainer.classList.remove('active');
+                            }
+                        });
                     });
-                });
-                document.querySelectorAll('[data-popup-trigger="login"]').forEach(button => {
-                    button.addEventListener('click', function() {
-                    document.querySelector('.login-form-container').classList.add('active');
+            
+                    // Open login popup
+                    document.querySelectorAll('[data-popup-trigger="login"]').forEach(button => {
+                        button.addEventListener('click', function() {
+                            document.querySelector('.login-form-container').classList.add('active');
+                        });
                     });
-                });
-                document.querySelectorAll('[data-popup-trigger="register"]').forEach(button => {
-                    button.addEventListener('click', function() {
-                    document.querySelector('.register-form-container').classList.add('active');
+            
+                    // Open register popup
+                    document.querySelectorAll('[data-popup-trigger="register"]').forEach(button => {
+                        button.addEventListener('click', function() {
+                            document.querySelector('.register-form-container').classList.add('active');
+                        });
                     });
+            
+                    // Switch from register to login
+                    document.querySelector('.toggle-login-btn').addEventListener('click', function() {
+                        closePopup('.register-form-container');
+                        document.querySelector('.login-form-container').classList.add('active');
+                    });
+            
+                    // Forgot password flow
+                    document.querySelector('.forgot-password').addEventListener('click', function() {
+                        closePopup('.login-form-container');
+                        document.querySelector('.forgot-password-form-container').classList.add('active');
+                    });
+            
+                    document.querySelector('.back-to-login-btn').addEventListener('click', function() {
+                        closePopup('.forgot-password-form-container');
+                        document.querySelector('.login-form-container').classList.add('active');
+                    });
+            
+                    // Success messages
+                    function showPopupMessage(message) {
+                        const popup = document.querySelector('.popup-message');
+                        popup.textContent = message;
+                        popup.classList.add('show');
+                        setTimeout(() => {
+                            popup.classList.remove('show');
+                        }, 3000);
+                    }
+            
+                    document.querySelector('.login-btn').addEventListener('click', function() {
+                        closePopup('.login-form-container');
+                        showPopupMessage("Successfully logged in!");
+                    });
+            
+                    document.querySelector('.register-btn').addEventListener('click', function() {
+                        closePopup('.register-form-container');
+                        showPopupMessage("Successfully registered!");
+                    });
+            
+                    document.querySelector('.forgot-password-btn').addEventListener('click', function() {
+                        closePopup('.forgot-password-form-container');
+                        showPopupMessage("The link to reset your password has been sent to your email address!");
+                    });
+            
+                    // Form Validation for Register Button
+                    function validateForm() {
+                        let email = document.getElementById("email").value.trim();
+                        let password = document.getElementById("password").value.trim();
+                        let confirmPassword = document.getElementById("confirm-password").value.trim();
+                        let ageCheckbox = document.getElementById("age-confirmation").checked;
+                        let registerBtn = document.querySelector(".register-btn");
+            
+                        // Enable button only if all fields are filled and checkbox is checked
+                        registerBtn.disabled = !(email !== "" && password !== "" && confirmPassword !== "" && ageCheckbox);
+                    }
+            
+                    // Attach validation to input fields and checkbox
+                    document.getElementById("email").addEventListener("input", validateForm);
+                    document.getElementById("password").addEventListener("input", validateForm);
+                    document.getElementById("confirm-password").addEventListener("input", validateForm);
+                    document.getElementById("age-confirmation").addEventListener("change", validateForm);
                 });
-                document.querySelector('.toggle-login-btn').addEventListener('click', function() {
-                    closePopup('.register-form-container');
-                    document.querySelector('.login-form-container').classList.add('active');
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    function validateLoginForm() {
+                        let email = document.getElementById("login-email").value.trim();
+                        let password = document.getElementById("login-password").value.trim();
+                        let loginBtn = document.querySelector(".login-btn");
+                
+                        // Enable button only if both fields have values
+                        loginBtn.disabled = !(email !== "" && password !== "");
+                
+                        // Optional: Change button style when enabled/disabled
+                        if (email !== "" && password !== "") {
+                            loginBtn.style.backgroundColor = "#28a745"; // Green when enabled
+                            loginBtn.style.cursor = "pointer";
+                        } else {
+                            loginBtn.style.backgroundColor = "#ccc"; // Gray when disabled
+                            loginBtn.style.cursor = "not-allowed";
+                        }
+                    }
+                
+                    // Attach event listeners to input fields
+                    document.getElementById("login-email").addEventListener("input", validateLoginForm);
+                    document.getElementById("login-password").addEventListener("input", validateLoginForm);
                 });
-                document.querySelector('.forgot-password').addEventListener('click', function() {
-                    closePopup('.login-form-container');
-                    document.querySelector('.forgot-password-form-container').classList.add('active');
-                });
-                document.querySelector('.back-to-login-btn').addEventListener('click', function() {
-                    closePopup('.forgot-password-form-container');
-                    document.querySelector('.login-form-container').classList.add('active');
-                });
-
-                function showPopupMessage(message) {
-                    const popup = document.querySelector('.popup-message');
-                    popup.textContent = message;
-                    popup.classList.add('show');
-                    setTimeout(() => {
-                    popup.classList.remove('show');
-                    }, 3000);
-                }
-                document.querySelector('.login-btn').addEventListener('click', function() {
-                    closePopup('.login-form-container');
-                    showPopupMessage("Successfully loggedin!");
-                });
-                document.querySelector('.register-btn').addEventListener('click', function() {
-                    closePopup('.register-form-container');
-                    showPopupMessage("Successfully registered!");
-                });
-                document.querySelector('.forgot-password-btn').addEventListener('click', function() {
-                    closePopup('.forgot-password-form-container');
-                    showPopupMessage("The link to reset your password has been sent to your email address!");
-                });
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    function validateForgotPasswordForm() {
+                        let email = document.getElementById("forgot-email").value.trim();
+                        let resetBtn = document.querySelector(".forgot-password-btn");
+                
+                        // Enable button only if the email field has a value
+                        resetBtn.disabled = (email === "");
+                
+                        // Optional: Change button style when enabled/disabled
+                        if (email !== "") {
+                            resetBtn.style.backgroundColor = "#28a745"; // Green when enabled
+                            resetBtn.style.cursor = "pointer";
+                        } else {
+                            resetBtn.style.backgroundColor = "#ccc"; // Gray when disabled
+                            resetBtn.style.cursor = "not-allowed";
+                        }
+                    }
+                
+                    // Attach event listener to email input
+                    document.getElementById("forgot-email").addEventListener("input", validateForgotPasswordForm);
                 });
             </script>
         </div>
-    <div class="faq-subpage-banner"></div>
-    <div class="about-content">
-        <div class="container">
-            <h1 class="text-center sports-title">Sports Betting</h1>
+        <div class="faq-subpage-banner"></div>
+        <div class="about-content">
+            <div class="container">
+                <h1 class="text-center sports-title">Sports Betting</h1>
+            </div>
         </div>
-    </div>
-    <div class="container card-bgcolor mb-5">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide col-md-4 horse">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="race-title">
-                                    <img src="images/horse-ride.png" alt="Race" class="icon"> R3 Sunshine Coast QLD
-                                </h6>
-                                <span class="text-danger fw-bold">1m 12s</span>
-                            </div>
-                            <div class="race-subtitleFlex">
-                                <div>
-                                    <p class="race-subtitle">Golden Mile Maiden Stakes</p>
+        <div class="container card-bgcolor mb-5">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide col-md-4 horse">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="race-title">
+                                        <img src="images/horse-ride.png" alt="Race" class="icon"> R3 Sunshine Coast QLD
+                                    </h6>
+                                    <span class="text-danger fw-bold">1m 12s</span>
                                 </div>
-                                <div>
-                                    <span class="race-time">12:15</span>
-                                </div>
-                            </div>
-                            <div class="top-selections">
-                                <div class="top-selections-flex">
-                                    <div class="top-selections-h6">
-                                        <h6>Expert Picks</h6>
+                                <div class="race-subtitleFlex">
+                                    <div>
+                                        <p class="race-subtitle">Golden Mile Maiden Stakes</p>
                                     </div>
-                                    <div class="top-selections-p">
-                                        <p>JPF(w)</p>
+                                    <div>
+                                        <span class="race-time">12:15</span>
                                     </div>
                                 </div>
-                                <table class="table table-borderless">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-logo-2.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>2. Blazing Comet</strong> (2)
-                                                </p>
-                                                <span class="trainer">Trainer: Scott Mitchell</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">3.10</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-4.webp" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>8. Silver Shadow</strong> (6)
-                                                </p>
-                                                <span class="trainer">Trainer: Emily Carter</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">5.00</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-logo-1.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>3. Night Raider</strong> (3)
-                                                </p>
-                                                <span class="trainer">Trainer: Lucas Bennett</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">6.20</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-12.jpg" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>7. Crimson Flash</strong> (4)
-                                                </p>
-                                                <span class="trainer">Trainer: Andrew Dawson</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">2.90</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-9.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>1. Midnight Warrior</strong> (7)
-                                                </p>
-                                                <span class="trainer">Trainer: Rachel Simmons</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">4.10</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-10.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>5. Desert King</strong> (5)
-                                                </p>
-                                                <span class="trainer">Trainer: Kevin Ross</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">5.50</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-2.webp" class="jersey-image" alt="Jersey">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>6. Thunder Strike</strong> (2)
-                                                </p>
-                                                <span class="trainer">T: James McAllister</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">3.20</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersery-11.png" class="jersey-image" alt="Jersey">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>4. Midnight Comet</strong> (7)
-                                                </p>
-                                                <span class="trainer">T: Sarah Whitmore</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">5.10</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-14.png" class="jersey-image" alt="Jersey">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>8. Silver Phantom</strong> (5)
-                                                </p>
-                                                <span class="trainer">T: Robert Hayes</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">5.50</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="top-selections">
+                                    <div class="top-selections-flex">
+                                        <div class="top-selections-h6">
+                                            <h6>Expert Picks</h6>
+                                        </div>
+                                        <div class="top-selections-p">
+                                            <p>JPF(w)</p>
+                                        </div>
+                                    </div>
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-logo-2.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>2. Blazing Comet</strong> (2)
+                                                    </p>
+                                                    <span class="trainer">Trainer: Scott Mitchell</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">3.10</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-4.webp" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>8. Silver Shadow</strong> (6)
+                                                    </p>
+                                                    <span class="trainer">Trainer: Emily Carter</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">5.00</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-logo-1.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>3. Night Raider</strong> (3)
+                                                    </p>
+                                                    <span class="trainer">Trainer: Lucas Bennett</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">6.20</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-12.jpg" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>7. Crimson Flash</strong> (4)
+                                                    </p>
+                                                    <span class="trainer">Trainer: Andrew Dawson</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">2.90</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-9.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>1. Midnight Warrior</strong> (7)
+                                                    </p>
+                                                    <span class="trainer">Trainer: Rachel Simmons</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">4.10</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-10.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>5. Desert King</strong> (5)
+                                                    </p>
+                                                    <span class="trainer">Trainer: Kevin Ross</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">5.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-2.webp" class="jersey-image" alt="Jersey">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>6. Thunder Strike</strong> (2)
+                                                    </p>
+                                                    <span class="trainer">T: James McAllister</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">3.20</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersery-11.png" class="jersey-image" alt="Jersey">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>4. Midnight Comet</strong> (7)
+                                                    </p>
+                                                    <span class="trainer">T: Sarah Whitmore</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">5.10</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-14.png" class="jersey-image" alt="Jersey">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>8. Silver Phantom</strong> (5)
+                                                    </p>
+                                                    <span class="trainer">T: Robert Hayes</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">5.50</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide col-md-4 dog">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="race-title">
+                            <img src="images/dog-ride.png" alt="Race" class="icon"> R5 Gulfstream Park FL
+                        </h6>
+                                    <span class="text-danger fw-bold">6m</span>
+                                </div>
+                                <div class="race-subtitleFlex">
+                                    <div>
+                                        <p class="race-subtitle">Gulfstream Sprint Challenge</p>
+                                    </div>
+                                    <div>
+                                        <span class="race-time">13:15</span>
+                                    </div>
+                                </div>
+                                <div class="top-selections">
+                                    <div class="top-selections-flex">
+                                        <div class="top-selections-h6">
+                                            <h6>Analyst Picks</h6>
+                                        </div>
+                                        <div class="top-selections-p">
+                                            <p>WIN(w)</p>
+                                        </div>
+                                    </div>
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-6.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>2. Flash Rocket</strong> (2)
+                                                    </p>
+                                                    <span class="trainer">Jockey: Marcus Taylor</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">2.30</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-2.webp" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>7. Blue Horizon</strong> (7)
+                                                    </p>
+                                                    <span class="trainer">Jockey: Daniel Harris</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">6.80</span>
+                                                </td>
+                                            </tr><tr>
+                                                <td>
+                                                    <span class="color-box white-red"></span>
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>5. Midnight Blaze</strong> (5)
+                                                    </p>
+                                                    <span class="trainer">Jockey: Alex Moreno</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">2.10</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-1.webp" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>12. Storm Runner</strong> (12)
+                                                    </p>
+                                                    <span class="trainer">Jockey: Ethan Roberts</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">7.60</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-9.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>9. Silver Arrow</strong> (9)
+                                                    </p>
+                                                    <span class="trainer">Jockey: Ryan Collins</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">8.30</span>
+                                                </td>
+                                            </tr><tr>
+                                                <td>
+                                                    <img src="images/jersey-6.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>2. Flash Rocket</strong> (2)
+                                                    </p>
+                                                    <span class="trainer">Jockey: Marcus Taylor</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">2.30</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-2.webp" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>7. Blue Horizon</strong> (7)
+                                                    </p>
+                                                    <span class="trainer">Jockey: Daniel Harris</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">6.80</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-3.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>11. Thunder Spirit</strong> (11)
+                                                    </p>
+                                                    <span class="trainer">Jockey: Oliver Scott</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">7.50</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide col-md-4 camel">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="race-title">
+                            <img src="images/camel-ride.png" alt="Race" class="icon"> R8 Addington NZL
+                        </h6>
+                                    <span class="text-danger fw-bold">4m 46s</span>
+                                </div>
+                                <div class="race-subtitleFlex">
+                                    <div>
+                                        <p class="race-subtitle">Champion's Long-Distance Derby</p>
+                                    </div>
+                                    <div>
+                                        <span class="race-time">11:45</span>
+                                    </div>
+                                </div>
+                                <div class="top-selections">
+                                    <div class="top-selections-flex">
+                                        <div class="top-selections-h6">
+                                            <h6>Expert Picks</h6>
+                                        </div>
+                                        <div class="top-selections-p">
+                                            <p>TBF(w)</p>
+                                        </div>
+                                    </div>
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="color-box teal-white"></span>
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>2. Desert King</strong> (2)
+                                                    </p>
+                                                    <span class="trainer">Trainer: Garry Cleeve</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">1.10</span>
+                                                </td>
+                                            </tr><tr>
+                                                <td>
+                                                    <img src="images/jersey-7.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>2. Know Keeper</strong> (2)
+                                                    </p>
+                                                    <span class="trainer">Trainer: Garry Cleeve</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">1.10</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="color-box pink"></span>
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>1. Opawa Chrissy</strong> (1)
+                                                    </p>
+                                                    <span class="trainer">Trainer: J & D Fahey</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">4.40</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="color-box brown-white"></span>
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>8. Know Account</strong> (8)
+                                                    </p>
+                                                    <span class="trainer">Trainer: Garry Cleeve</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">1.32</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-3.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>1. Sandstorm</strong> (1)
+                                                    </p>
+                                                    <span class="trainer">Trainers: J & D Fahey</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">4.40</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jersey-logo-3.png" class="jersey-image">
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>8. Oasis Runner</strong> (8)
+                                                    </p>
+                                                    <span class="trainer">Trainer: Garry Cleeve</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">1.32</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="color-box yellow"></span>
+                                                </td>
+                                                <td>
+                                                    <p class="racenum-name">
+                                                        <strong>24. Opawa Chrissy</strong> (1)
+                                                    </p>
+                                                    <span class="trainer">Trainer: J & D Fahey</span>
+                                                </td>
+                                                <td>
+                                                    <span class="odds-box">5.40</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide col-md-4 dog">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="race-title">
-                        <img src="images/dog-ride.png" alt="Race" class="icon"> R5 Gulfstream Park FL
-                    </h6>
-                                <span class="text-danger fw-bold">6m</span>
-                            </div>
-                            <div class="race-subtitleFlex">
-                                <div>
-                                    <p class="race-subtitle">Gulfstream Sprint Challenge</p>
-                                </div>
-                                <div>
-                                    <span class="race-time">13:15</span>
-                                </div>
-                            </div>
-                            <div class="top-selections">
-                                <div class="top-selections-flex">
-                                    <div class="top-selections-h6">
-                                        <h6>Analyst Picks</h6>
-                                    </div>
-                                    <div class="top-selections-p">
-                                        <p>WIN(w)</p>
-                                    </div>
-                                </div>
-                                <table class="table table-borderless">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-6.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>2. Flash Rocket</strong> (2)
-                                                </p>
-                                                <span class="trainer">Jockey: Marcus Taylor</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">2.30</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-2.webp" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>7. Blue Horizon</strong> (7)
-                                                </p>
-                                                <span class="trainer">Jockey: Daniel Harris</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">6.80</span>
-                                            </td>
-                                        </tr><tr>
-                                            <td>
-                                                <span class="color-box white-red"></span>
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>5. Midnight Blaze</strong> (5)
-                                                </p>
-                                                <span class="trainer">Jockey: Alex Moreno</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">2.10</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-1.webp" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>12. Storm Runner</strong> (12)
-                                                </p>
-                                                <span class="trainer">Jockey: Ethan Roberts</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">7.60</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-9.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>9. Silver Arrow</strong> (9)
-                                                </p>
-                                                <span class="trainer">Jockey: Ryan Collins</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">8.30</span>
-                                            </td>
-                                        </tr><tr>
-                                            <td>
-                                                <img src="images/jersey-6.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>2. Flash Rocket</strong> (2)
-                                                </p>
-                                                <span class="trainer">Jockey: Marcus Taylor</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">2.30</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-2.webp" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>7. Blue Horizon</strong> (7)
-                                                </p>
-                                                <span class="trainer">Jockey: Daniel Harris</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">6.80</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-3.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>11. Thunder Spirit</strong> (11)
-                                                </p>
-                                                <span class="trainer">Jockey: Oliver Scott</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">7.50</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <input type="email" placeholder="Enter email address">
+                    <button>SUBSCRIBE</button>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Customer Support</h3>
+                        <ul>
+                            <li>
+                                <a href="tel:+67785185839"><ion-icon name="call-outline"></ion-icon> +67 785 185 839</a>
+                            </li>
+                            <li>
+                                <a href="mailto:support@getsetbets.com"><ion-icon name="mail-outline"></ion-icon> support@getsetbets.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Explore</h3>
+                        <ul>
+                            <li>
+                                <a href="sports-btting.html">Sports Betting</a>
+                            </li>
+                            <li>
+                                <a href="promotion.html">Promotions</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Company</h3>
+                        <ul>
+                            <li>
+                                <a href="about-us.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="responsible-gaming.html">Responsible Gaming</a>
+                            </li>
+                            <li>
+                                <a href="mailto:support@getsetbets.com">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Support</h3>
+                        <ul>
+                            <li>
+                                <a href="cookie.html">Cookie Policy</a>
+                            </li>
+                            <li>
+                                <a href="terms.html">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Our Trusted Partners</p>
+                    <ul class="trusted-partner-img">
+                        <li>
+                            <img src="images/stripe.png" class="partner-6">
+                        </li>
+                        <li>
+                            <img src="images/mastercard.png" class="partner-1">
+                        </li>
+                        <li>
+                            <img src="images/visa.png" class="partner-3">
+                        </li>
+                        <li>
+                            <img src="images/paypal.png" class="partner-2">
+                        </li>
+                        <li>
+                            <img src="images/social.png" class="partner-4">
+                        </li>
+                        <li>
+                            <img src="images/ecopayz-1.svg" class="partner-5">
+                        </li>
+                    </ul>
+                    <a href="#">See All →</a>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-section warning-footer">
+                        <div>
+                            <img src="images/18+-footer-logo.png" class="f-warning-img">
+                        </div>
+                        <div>
+                            <p class="f-p-area f-warning-img">South Australian residents: Getsetbets.com operates under the South Australia Gambling Codes of Practice (INTERSTATE BETTING OPERATOR 54300648) . It is licensed in New South Wales by Racing NSW and regulated by Liquor & Gaming NSW. Gamble responsibly—consider your choices. For support, call Gambling Help at 1800 858 858.</p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide col-md-4 camel">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="race-title">
-                        <img src="images/camel-ride.png" alt="Race" class="icon"> R8 Addington NZL
-                    </h6>
-                                <span class="text-danger fw-bold">4m 46s</span>
-                            </div>
-                            <div class="race-subtitleFlex">
-                                <div>
-                                    <p class="race-subtitle">Champion's Long-Distance Derby</p>
-                                </div>
-                                <div>
-                                    <span class="race-time">11:45</span>
-                                </div>
-                            </div>
-                            <div class="top-selections">
-                                <div class="top-selections-flex">
-                                    <div class="top-selections-h6">
-                                        <h6>Expert Picks</h6>
-                                    </div>
-                                    <div class="top-selections-p">
-                                        <p>TBF(w)</p>
-                                    </div>
-                                </div>
-                                <table class="table table-borderless">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <span class="color-box teal-white"></span>
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>2. Desert King</strong> (2)
-                                                </p>
-                                                <span class="trainer">Trainer: Garry Cleeve</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">1.10</span>
-                                            </td>
-                                        </tr><tr>
-                                            <td>
-                                                <img src="images/jersey-7.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>2. Know Keeper</strong> (2)
-                                                </p>
-                                                <span class="trainer">Trainer: Garry Cleeve</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">1.10</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="color-box pink"></span>
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>1. Opawa Chrissy</strong> (1)
-                                                </p>
-                                                <span class="trainer">Trainer: J & D Fahey</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">4.40</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="color-box brown-white"></span>
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>8. Know Account</strong> (8)
-                                                </p>
-                                                <span class="trainer">Trainer: Garry Cleeve</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">1.32</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-3.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>1. Sandstorm</strong> (1)
-                                                </p>
-                                                <span class="trainer">Trainers: J & D Fahey</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">4.40</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="images/jersey-logo-3.png" class="jersey-image">
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>8. Oasis Runner</strong> (8)
-                                                </p>
-                                                <span class="trainer">Trainer: Garry Cleeve</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">1.32</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="color-box yellow"></span>
-                                            </td>
-                                            <td>
-                                                <p class="racenum-name">
-                                                    <strong>24. Opawa Chrissy</strong> (1)
-                                                </p>
-                                                <span class="trainer">Trainer: J & D Fahey</span>
-                                            </td>
-                                            <td>
-                                                <span class="odds-box">5.40</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                <div class="footer-copy">
+                    <p>Copyright © 2025 GETSETBETS.com is operated by Swopstakes Australia Pty Ltd ABN 46 634 089 928 | All Rights Reserved</p>
+                    <div class="footer-links">
+                        <a href="terms.html">Terms</a>
+                        <a href="privacy-policy.html">Privacy</a>
+                        <a href="responsible-gaming.html">Responsible Gaming</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <input type="email" placeholder="Enter email address">
-                <button>SUBSCRIBE</button>
-            </div>
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Customer Support</h3>
-                    <ul>
-                        <li>
-                            <a href="tel:+67785185839"><ion-icon name="call-outline"></ion-icon> +67 785 185 839</a>
-                        </li>
-                        <li>
-                            <a href="mailto:support@getsetbets.com"><ion-icon name="mail-outline"></ion-icon> support@getsetbets.com</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Explore</h3>
-                    <ul>
-                        <li>
-                            <a href="sports-btting.html">Sports Betting</a>
-                        </li>
-                        <li>
-                            <a href="promotion.html">Promotions</a>
-                        </li>
-                        <li>
-                            <a href="faq.html">FAQ</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <ul>
-                        <li>
-                            <a href="about-us.html">About Us</a>
-                        </li>
-                        <li>
-                            <a href="responsible-gaming.html">Responsible Gaming</a>
-                        </li>
-                        <li>
-                            <a href="mailto:support@getsetbets.com">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Support</h3>
-                    <ul>
-                        <li>
-                            <a href="cookie.html">Cookie Policy</a>
-                        </li>
-                        <li>
-                            <a href="terms.html">Terms & Conditions</a>
-                        </li>
-                        <li>
-                            <a href="privacy-policy.html">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Our Trusted Partners</p>
-                <ul class="trusted-partner-img">
-                    <li>
-                        <img src="images/stripe.png" class="partner-6">
-                    </li>
-                    <li>
-                        <img src="images/mastercard.png" class="partner-1">
-                    </li>
-                    <li>
-                        <img src="images/visa.png" class="partner-3">
-                    </li>
-                    <li>
-                        <img src="images/paypal.png" class="partner-2">
-                    </li>
-                    <li>
-                        <img src="images/social.png" class="partner-4">
-                    </li>
-                    <li>
-                        <img src="images/ecopayz-1.svg" class="partner-5">
-                    </li>
-                </ul>
-                <a href="#">See All →</a>
-            </div>
-            <div class="footer-content">
-                <div class="footer-section warning-footer">
-                    <div>
-                        <img src="images/18+-footer-logo.png" class="f-warning-img">
-                    </div>
-                    <div>
-                        <p class="f-p-area f-warning-img">South Australian residents: Getsetbets.com operates under the South Australia Gambling Codes of Practice (INTERSTATE BETTING OPERATOR 54300648) . It is licensed in New South Wales by Racing NSW and regulated by Liquor & Gaming NSW. Gamble responsibly—consider your choices. For support, call Gambling Help at 1800 858 858.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copy">
-                <p>Copyright © 2025 GETSETBETS.com is operated by Swopstakes Australia Pty Ltd ABN 46 634 089 928 | All Rights Reserved</p>
-                <div class="footer-links">
-                    <a href="terms.html">Terms</a>
-                    <a href="privacy-policy.html">Privacy</a>
-                    <a href="responsible-gaming.html">Responsible Gaming</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Second Swiper (New Banner Swiper)
-            var bannerSwiper = new Swiper(".swiper-container.banner-swiper", {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            effect: "fade", // Smooth fading effect for banners
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Second Swiper (New Banner Swiper)
+                var bannerSwiper = new Swiper(".swiper-container.banner-swiper", {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                effect: "fade", // Smooth fading effect for banners
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                });
             });
-        });
-    </script>
-    <script>
-        // Initialize the card slider
-        var cardSwiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            loop: true,
-            navigation: {
-            prevEl: '.swiper-button-prev',
-            nextEl: '.swiper-button-next',
-            },
-            breakpoints: {
-            768: {
-                slidesPerView: 3,
+        </script>
+        <script>
+            // Initialize the card slider
+            var cardSwiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
                 spaceBetween: 10,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 15,
-            }
-            }
-        });
-        // Filter functionality with active icon change
-        document.querySelectorAll('.flex-filter-img').forEach(function(filterIcon) {
-            filterIcon.addEventListener('click', function() {
-            // Remove active class from all icons
-            document.querySelectorAll('.flex-filter-img').forEach(function(icon) {
-                icon.classList.remove('active');
-                icon.querySelector('img').classList.add('inactive'); // Make all images inactive
-            });
-            // Add active class to the clicked icon
-            this.classList.add('active');
-            this.querySelector('img').classList.remove('inactive'); // Active image is not grayscale
-            // Optionally, you can add logic to filter content here
-            });
-        });
-        // Filter functionality for icons
-        document.querySelectorAll('.flex-filter-img').forEach(function(filterIcon) {
-            filterIcon.addEventListener('click', function() {
-            const filterValue = this.getAttribute('data-filter');
-            document.querySelectorAll('.swiper-slide').forEach(function(slide) {
-                if (slide.classList.contains(filterValue)) {
-                slide.style.display = 'block';
-                } else {
-                slide.style.display = 'none';
+                loop: true,
+                navigation: {
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+                },
+                breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                }
                 }
             });
-            // **Fix the button positioning issue**
-            setTimeout(() => {
-                cardSwiper.update(); // Recalculate Swiper layout
-            }, 300);
+            // Filter functionality with active icon change
+            document.querySelectorAll('.flex-filter-img').forEach(function(filterIcon) {
+                filterIcon.addEventListener('click', function() {
+                // Remove active class from all icons
+                document.querySelectorAll('.flex-filter-img').forEach(function(icon) {
+                    icon.classList.remove('active');
+                    icon.querySelector('img').classList.add('inactive'); // Make all images inactive
+                });
+                // Add active class to the clicked icon
+                this.classList.add('active');
+                this.querySelector('img').classList.remove('inactive'); // Active image is not grayscale
+                // Optionally, you can add logic to filter content here
+                });
             });
-        });
-        // Show all cards when the filter title is clicked
-        document.querySelector('.filter-title').addEventListener('click', function() {
-            // Show all slides
-            document.querySelectorAll('.swiper-slide').forEach(function(slide) {
-            slide.style.display = 'block'; // Make all slides visible
+            // Filter functionality for icons
+            document.querySelectorAll('.flex-filter-img').forEach(function(filterIcon) {
+                filterIcon.addEventListener('click', function() {
+                const filterValue = this.getAttribute('data-filter');
+                document.querySelectorAll('.swiper-slide').forEach(function(slide) {
+                    if (slide.classList.contains(filterValue)) {
+                    slide.style.display = 'block';
+                    } else {
+                    slide.style.display = 'none';
+                    }
+                });
+                // **Fix the button positioning issue**
+                setTimeout(() => {
+                    cardSwiper.update(); // Recalculate Swiper layout
+                }, 300);
+                });
             });
-            // Optionally, reset the filter icons (if needed)
-            document.querySelectorAll('.flex-filter-img').forEach(function(icon) {
-            icon.classList.remove('active');
-            icon.querySelector('img').classList.remove('inactive'); // Reset the icon filter
+            // Show all cards when the filter title is clicked
+            document.querySelector('.filter-title').addEventListener('click', function() {
+                // Show all slides
+                document.querySelectorAll('.swiper-slide').forEach(function(slide) {
+                slide.style.display = 'block'; // Make all slides visible
+                });
+                // Optionally, reset the filter icons (if needed)
+                document.querySelectorAll('.flex-filter-img').forEach(function(icon) {
+                icon.classList.remove('active');
+                icon.querySelector('img').classList.remove('inactive'); // Reset the icon filter
+                });
+                // Refresh Swiper after resetting slides
+                cardSwiper.update();
             });
-            // Refresh Swiper after resetting slides
-            cardSwiper.update();
-        });
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-</body>
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    </body>
 
 </html>
