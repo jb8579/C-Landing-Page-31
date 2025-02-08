@@ -167,11 +167,11 @@ section.promotion-section {
   padding: 0 50px;
 }
 .promotion-card > a > button {
-  padding: 10px 30px;
-  background: linear-gradient(270deg, #0d08bd 4%, red 100%);
+  padding: 9px 30px;
+  background: linear-gradient(314deg, rgb(3, 94, 60) 0, #39ff14 100%);
   color: #fff;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
   border-radius: 30px;
   font-weight: 600;
   margin: 30px 0 10px;
@@ -181,7 +181,7 @@ section.promotion-section {
   text-shadow: 0 5px 6px #ffffff6b;
   outline: 0 !important;
   position: relative;
-  transform: translateX(-70px);
+  transform: translateX(-82px);
   left: 50%;
 }
 .promotion-card.promotion-card-center {
@@ -212,6 +212,6 @@ section.promotion-section {
   width: 155px;
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  background: linear-gradient(314deg, rgb(6 70 47) 0, #39ff14 100%);
+  background: linear-gradient(270deg, #0d08bd 4%, red 100%);
   font-style: oblique;
 }
